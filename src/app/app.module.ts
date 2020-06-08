@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
-<<<<<<< HEAD
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FunctionhallComponent } from './functionhall/functionhall.component';
@@ -37,17 +35,6 @@ import { RegisterComponent } from './register/register.component';
     HttpClientModule,
   ],
   providers: [SearchbarService],
-=======
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
->>>>>>> eb85083c80ef45243776770ef1d992f3c167401d
   bootstrap: [AppComponent]
 })
 export class AppModule { }

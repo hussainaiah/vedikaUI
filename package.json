@@ -11,7 +11,6 @@
   },
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
     "@angular/animations": "^9.1.9",
     "@angular/common": "^9.1.9",
     "@angular/compiler": "^9.1.9",
@@ -44,7 +43,6 @@
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~3.0.1",
     "karma-jasmine-html-reporter": "^1.5.4",
-=======
     "@angular/animations": "~9.1.4",
     "@angular/common": "~9.1.4",
     "@angular/compiler": "~9.1.4",
@@ -73,7 +71,6 @@
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~3.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
->>>>>>> eb85083c80ef45243776770ef1d992f3c167401d
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
