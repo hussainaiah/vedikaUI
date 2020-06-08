@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+<<<<<<< HEAD
 
               "node_modules/bootstrap3/dist/css/bootstrap.min.css",
               "src/styles.css"
@@ -32,6 +33,11 @@
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap3/dist/js/bootstrap.min.js"
             ]
+=======
+              "src/styles.css"
+            ],
+            "scripts": []
+>>>>>>> eb85083c80ef45243776770ef1d992f3c167401d
           },
           "configurations": {
             "production": {
@@ -124,6 +130,7 @@
           }
         }
       }
+<<<<<<< HEAD
     }
   },
   "defaultProject": "vedikaUI",
@@ -131,3 +138,8 @@
     "analytics": false
   }
 }
+=======
+    }},
+  "defaultProject": "vedikaUI"
+}
+>>>>>>> eb85083c80ef45243776770ef1d992f3c167401d
