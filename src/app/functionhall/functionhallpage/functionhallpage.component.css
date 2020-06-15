@@ -1,3 +1,11 @@
-.HitInfo__details{
+/* .HitInfo__details{
     padding-left: 500px;
+} */
+.primary-cta{
+    width: 100px;
+    margin-top: 20px;
+}
+.media-flex__body{
+padding-top: 16px;
+padding-left: 100px;
 }

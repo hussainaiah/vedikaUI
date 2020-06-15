@@ -25,8 +25,9 @@ export class HeaderComponent implements OnInit {
       this.router.navigateByUrl("/functionhall")
   
     }
-    Addvenue(){
-
+    
+    onclick(){
+      this.router.navigateByUrl("/dashboard")
     }
    
     

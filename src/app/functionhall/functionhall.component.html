@@ -1,6 +1,6 @@
 <!--=========================================================
                      FUNCTION HALLS VIEW 
-    ===========================================================-->
+    ===========================================================--><form>
     <div id="Application__resultsViewport" class="Application__resultsViewport">
         <div class="Application__resultsColumn">
             <!--========================================================
@@ -10,7 +10,7 @@
                 <!-- ========================================================= 
                                     FUNCTION HALLS LIST 
                     ===========================================================-->
-                <div *ngFor="let item of functionHalls" >
+                <div *ngFor="let item of functionHalls" (click)="moreInfo(item.ownerId)">
                     <div class="Hit media-flex media-flex--left media-flex--xs" data-wdio="hit" role="listitem">
                         <!-- =========================================================
                                     FUNCTION HALL IMAGE VIEW 
@@ -69,4 +69,4 @@
                 </div>
             </section>
         </div>
-    </div>
+    </div></form>

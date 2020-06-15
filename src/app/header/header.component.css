@@ -2,6 +2,19 @@
     position: relative;
 }
 
+.row{
+  /* border-radius: 100px; */
+  padding: 5px 8px;
+  text-align: center;
+  /* text-decoration: none; */
+  font-size: 13px;
+  margin: 15px 10px;
+  /* border-color: coral; */
+  float: right;
+  position: relative;
+  background-color: white;
+}
+
 .HeroImage__picture {
     display: block;
     height: 100%;
@@ -2659,6 +2672,12 @@ img {
             margin-left: -10px;
             margin-right: -10px
         }
+      }
+
+      button{
+        border-radius: 30px;
+        margin-top: 5px;
+       
       }
       
       /* @media (min-width:768px) {
