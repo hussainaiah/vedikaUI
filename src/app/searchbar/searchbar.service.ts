@@ -15,7 +15,7 @@ export class SearchbarService {
   constructor(private http: HttpClient) { }
   getAllFunctionHalls():Observable<any>
   {
-    return this.http.get('http://localhost:8057/api/functionhallslist');
+    return this.http.get('http://localhost:8057/api/functionhalls');
   }
   getFunctionhallByCity(cityname):Observable<any>
   {
