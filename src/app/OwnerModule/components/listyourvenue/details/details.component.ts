@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
-// import { DetailsModel } from 'src/app/OwnerModule/models/details.model';
-// import { SessionStorageService } from 'src/app/OwnerModule/services/sessionstorage.service';
-// import { DetailsService } from 'src/app/OwnerModule/services/details.service';
+import { DetailsModel } from 'src/app/OwnerModule/models/details.model';
 import { LocalStorageService } from 'src/app/OwnerModule/services/localstorage.service';
 
 @Component({
@@ -13,27 +11,23 @@ import { LocalStorageService } from 'src/app/OwnerModule/services/localstorage.s
 })
 export class DetailsComponent implements OnInit {
 
-  // detailsForm: FormGroup;
-
   DetailsForm: FormGroup;;
   OwnerDetails:any;
-  // detailsmodel: DetailsModel[] = [];
+  detailsmodel: DetailsModel[] = [];
 
   constructor(
     private router: Router,
-    // private details: DetailsService,
     private _fb: FormBuilder,
     private localstorageservice: LocalStorageService
-
   ) { }
 
   ngOnInit(): void {
     this.OwnerDetails = JSON.parse(window.localStorage.getItem('OwnerDetails'));
     this.DetailsForm = this._fb.group({
-
       name: new FormControl(this.OwnerDetails ? this.OwnerDetails.name : '', Validators.required),
-      firstname: new FormControl(this.OwnerDetails ? this.OwnerDetails.firstname : '', Validators.required),
-      lastname: new FormControl(this.OwnerDetails ? this.OwnerDetails.lastname : '', Validators.required),
+      ownerFirstName: new FormControl(this.OwnerDetails ? this.OwnerDetails.ownerFirstName : '', Validators.required),
+      ownerLastName: new FormControl(this.OwnerDetails ? this.OwnerDetails.ownerLastName : '', Validators.required),
+      functionhallPrice: new FormControl(this.OwnerDetails ? this.OwnerDetails.functionhallPrice : '', Validators.required),
       functionhalldescription: new FormControl(this.OwnerDetails ? this.OwnerDetails.functionhalldescription : '', Validators.required),
       functionhalltype: new FormControl(this.OwnerDetails ? this.OwnerDetails.functionhalltype : '', Validators.required),
       maximumguest: new FormControl(this.OwnerDetails ? this.OwnerDetails.maximumguest : '', Validators.required),
@@ -48,32 +42,29 @@ export class DetailsComponent implements OnInit {
       noalcohol: new FormControl(this.OwnerDetails ? this.OwnerDetails.noalcohol : '', Validators.required),
       soundsystem: new FormControl(this.OwnerDetails ? this.OwnerDetails.soundsystem : '', Validators.required),
       //eventType
-      Banquethall: new FormControl(this.OwnerDetails ? this.OwnerDetails.Banquethall : '', Validators.required),
-      Partyroom: new FormControl(this.OwnerDetails ? this.OwnerDetails.Partyroom : '', Validators.required),
-      Conference: new FormControl(this.OwnerDetails ? this.OwnerDetails.Conference : '', Validators.required),
-      Performance: new FormControl(this.OwnerDetails ? this.OwnerDetails.Performance : '', Validators.required),
-      Weddinghall: new FormControl(this.OwnerDetails ? this.OwnerDetails.Weddinghall : '', Validators.required),
+      banquethall: new FormControl(this.OwnerDetails ? this.OwnerDetails.banquethall : '', Validators.required),
+      partyroom: new FormControl(this.OwnerDetails ? this.OwnerDetails.partyroom : '', Validators.required),
+      conference: new FormControl(this.OwnerDetails ? this.OwnerDetails.conference : '', Validators.required),
+      performance: new FormControl(this.OwnerDetails ? this.OwnerDetails.performance : '', Validators.required),
+      weddinghall: new FormControl(this.OwnerDetails ? this.OwnerDetails.weddinghall : '', Validators.required),
       eventspace: new FormControl(this.OwnerDetails ? this.OwnerDetails.eventspace : '', Validators.required),
-      Nightclub: new FormControl(this.OwnerDetails ? this.OwnerDetails.Nightclub : '', Validators.required),
-
+      nightclub: new FormControl(this.OwnerDetails ? this.OwnerDetails.nightclub : '', Validators.required),
     }
     )
   }
 
-
   back() {
     this.router.navigateByUrl("/location");
-
   }
+
   onclick() {
-
     this.OwnerDetails = {
-
       name: this.DetailsForm.get('name').value,
-      firstname: this.DetailsForm.get('firstname').value,
-      lastname: this.DetailsForm.get('lastname').value,
+      ownerFirstName: this.DetailsForm.get('ownerFirstName').value,
+      ownerLastName: this.DetailsForm.get('ownerLastName').value,
       functionhalldescription: this.DetailsForm.get('functionhalldescription').value,
       functionhalltype: this.DetailsForm.get('functionhalltype').value,
+      functionhallPrice: this.DetailsForm.get('functionhallPrice').value,
       maximumguest: this.DetailsForm.get('maximumguest').value,
       briderooms: this.DetailsForm.get('briderooms').value,
       // AMENITIES
@@ -84,29 +75,19 @@ export class DetailsComponent implements OnInit {
       lightingsystem: this.DetailsForm.get('lightingsystem').value,
       noalcohol: this.DetailsForm.get('noalcohol').value,
       soundsystem: this.DetailsForm.get('soundsystem').value,
+      dancefloor: this.DetailsForm.get('dancefloor').value,
       //eventType
-      Banquethall: this.DetailsForm.get('Banquethall').value,
-      Partyroom: this.DetailsForm.get('Partyroom').value,
-      Conference: this.DetailsForm.get('Conference').value,
-      Performance: this.DetailsForm.get('Performance').value,
-      Weddinghall: this.DetailsForm.get('Weddinghall').value,
+      banquethall: this.DetailsForm.get('banquethall').value,
+      partyroom: this.DetailsForm.get('partyroom').value,
+      conference: this.DetailsForm.get('conference').value,
+      performance: this.DetailsForm.get('performance').value,
+      weddinghall: this.DetailsForm.get('weddinghall').value,
       eventspace: this.DetailsForm.get('eventspace').value,
-      Nightclub: this.DetailsForm.get('Nightclub').value,
-
+      nightclub: this.DetailsForm.get('nightclub').value,
     }
-
     this.localstorageservice.set("OwnerDetails", this.OwnerDetails);
     this.router.navigateByUrl("/photos");
   }
-
-
-
-
-
-
-
-
-
 }
 
 

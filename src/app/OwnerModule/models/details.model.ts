@@ -2,6 +2,7 @@ export class DetailsModel {
    "name":string;
     "functionhalldescription": string;
     "functionhalltype": string;
+    "functionhallPrice": number;
     "foodtype" : string;
     "maximumguest" : number;
     "briderooms" : string;
@@ -17,12 +18,12 @@ export class DetailsModel {
     "noalcohol":string;
     "soundsystem":string;
     // "eventType": [];
-    "Banquethall":string;
-    "Partyroom":string;
-    "Conference":string;
-    "Performance":string;
-    "Weddinghall":string;
+    "banquethall":string;
+    "partyroom":string;
+    "conference":string;
+    "performance":string;
+    "weddinghall":string;
     "eventspace":string;
-    "Nightclub":string;
+    "nightclub":string;
 
 }

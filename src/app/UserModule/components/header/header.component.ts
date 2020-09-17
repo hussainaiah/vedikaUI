@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit {
 
   }
   onclick() {
-    this.router.navigateByUrl("/login1")
+    this.router.navigateByUrl("/owner-login")
   }
 }
 

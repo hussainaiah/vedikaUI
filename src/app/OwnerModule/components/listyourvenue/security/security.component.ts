@@ -49,8 +49,6 @@ export class SecurityComponent implements OnInit {
       message: "otp sent successfully"
     }
     this.securityservice.addmobileNumber(this.mobileNumber, req).subscribe(response => {
-      // this.mobileNumber.push(response);
-      // this.SecurityForm.reset();
     });
     this.localstorageservice.set("OwnerSecurity", JSON.stringify(this.OwnerSecurity));
     this.router.navigateByUrl("/verification")

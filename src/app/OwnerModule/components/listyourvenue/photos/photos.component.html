@@ -17,9 +17,9 @@
                 aria-valuemax="100"></div>
         </div>
         <hr>
-<!-- =================================================================================
+        <!-- =================================================================================
     		            WELCOME OPTIONS WITH GRID 
-================================================================================== -->
+        ================================================================================== -->
         <div class="row no-gutters">
             <div class="col-md-3">
                 <h4><a [routerLink]="['../dashboard/']">Welcome</a></h4>
@@ -42,29 +42,29 @@
                     style="height: 26px; width: 26px; margin-left: 15px;">
                 <a [routerLink]="['../publishlisting/']" style="padding-left: 20px;">Publish listing</a><br><br>
             </div>
-<!-- =================================================================================
+            <!-- =================================================================================
     		           OWNER FUNCTION HALL PHOTOS
-================================================================================== -->
+            ================================================================================== -->
             <div class="col-md-8" style="margin-top: 20px;">
-                <div class="data" style="height: auto;padding: 40px;">
+                <div class="data" style="height: auto;padding: 40px; margin-bottom: 60px;">
                     <b>
                         <h2 class="title">Add photos of your functionhalls</h2>
                     </b>
                     <p>Let guests see why they should pick your functionhalls with well-lit,
                         landscape-oriented photos of these areas they will be able to acess.
                     </p>
+
                     <form>
                         <div>
                             <label for="file" button type="file" name="file" class="btn btn-primary"
                                 style=" margin-left: 200px; margin-top: 30px; border-radius: 40px;"><i
                                     class="fa fa-plus" style="margin-right: 7px;"></i>Add photos</label>
-                            <input type="file" id="file" name="file" multiple="" #Image accept="images/*"
-                                (change)="onFileChange($event)" value="file" style="visibility:hidden;">
+                            <input type="file" id="file" name="file" multiple="" (change)="onFileChange($event)"
+                                value="file" style="visibility:hidden;">
                         </div>
 
                         <div class="row" style="margin-left: 6px;">
-                            <img *ngFor='let url of images' [src]="url" height="120px" width="170px"
-                                style="margin: 3px;">
+                            <img *ngFor='let url of urls' [src]="url" height="120px" width="170px" style="margin: 3px;">
                         </div>
 
                         <b>
@@ -73,16 +73,16 @@
 
                         <p>Photos must be JPEG or PNG format and at least 1024x683 pixels.</p>
                         <hr>
-<!-- =================================================================================
-    		           BACK AND NEXT BUTTONS
-================================================================================== -->
+                        <!-- =================================================================================
+                                                BACK AND NEXT BUTTONS
+                        ================================================================================== -->
                         <span>
                             <button type="button" class="btn btn-outline-primary" (click)="back()">Back</button>
                             <button type="button" class="btn btn-primary" style="margin-left: 375px;"
                                 (click)="next()">Next</button>
                         </span>
                     </form>
-                </div><br><br><br><br>
+                </div>
             </div>
         </div>
     </div>

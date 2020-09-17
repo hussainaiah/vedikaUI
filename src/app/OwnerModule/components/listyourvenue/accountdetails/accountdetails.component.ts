@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { accountDetailsService } from 'src/app/OwnerModule/services/accountDetails.service';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-// import { accountDetailsModel } from 'src/app/OwnerModule/models/accountDetails.model';
+import { accountDetailsModel } from 'src/app/OwnerModule/models/accountDetails.model';
 import { SessionStorageService } from 'src/app/OwnerModule/services/sessionstorage.service';
 
 @Component({
@@ -14,13 +14,12 @@ export class AccountdetailsComponent implements OnInit {
 
   AccountdetailsForm:FormGroup ;
   OwnerAccountdetails :any;
-  // accountDetailsModel = [];
-
-
+  accountDetailsModel = [];
   bankInfo = [];
   bankbranchInfo: any;
   bankbranchIfscInfo: any;
   selBankName;
+  
   constructor(private router: Router,
     private accountDetails: accountDetailsService,
     private _fb: FormBuilder,
@@ -77,13 +76,6 @@ onclick() {
     Tandc: this.AccountdetailsForm.get('Tandc').value,
   }
   this.sessionstorageservice.set("OwnerAccountdetails", this.OwnerAccountdetails);
-  // this.accountDetails.addAccountDetails(this.OwnerAccountdetails).subscribe(
-  //   (data: accountDetailsModel) => {
-  //     console.log(data);
-  //     // this.sessionstorageservice.set("OwnerPaymentdetails", this.OwnerPaymentdetails);
-  //   },
-  //   (error: any) => console.log(error)
-  // )
   console.log("PAYDET22");
   this.router.navigateByUrl("/publishlisting")
 }

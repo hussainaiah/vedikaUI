@@ -4,9 +4,6 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { SessionStorageService } from 'src/app/OwnerModule/services/sessionstorage.service';
 import { PaymentService } from 'src/app/OwnerModule/services/payment.service';
 
-
-
-
 @Component({
   selector: 'app-payment',
   templateUrl: './payment.component.html',
@@ -16,7 +13,6 @@ export class PaymentComponent implements OnInit {
   paymentForm: FormGroup;
   PaymentForm;
   OwnerPayment;
-
   var_one: any;
   insertStatus: any;
 
@@ -45,13 +41,9 @@ export class PaymentComponent implements OnInit {
     this.OwnerPayment = {
       perminantcountry: this.PaymentForm.get('perminantcountry').value,
       bankingcountry: this.PaymentForm.get('bankingcountry').value,
-
     }
-
-    this.sessionstorageservice.set("OwnerPayment",this.OwnerPayment);
-
+    this.sessionstorageservice.set("OwnerPayment", this.OwnerPayment);
   }
-
 }
 
 

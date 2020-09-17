@@ -1,3 +1,3 @@
 export class SecurityModel {
-    "mobilenumber": number;
+    "mobileNumber": string;
 }

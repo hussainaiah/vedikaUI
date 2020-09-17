@@ -30,7 +30,9 @@ import { BookingsComponent } from './OwnerModule/components/bookings/bookings.co
 import { CalendarComponent } from './OwnerModule/components/calendar/calendar.component';
 import { ProfileComponent } from './OwnerModule/components/profile/profile.component';
 import { SettingsComponent } from './OwnerModule/components/settings/settings.component';
-import { Login1Component } from './OwnerModule/components/login1/login1.component';
+// import { Login1Component } from './OwnerModule/components/login1/login1.component';
+import { OwnerLoginComponent } from './OwnerModule/components/owner-login/owner-login.component';
+import { OwnerRegisterComponent } from './OwnerModule/components/owner-register/owner-register.component';
  
 @NgModule({
   declarations: [
@@ -60,7 +62,9 @@ import { Login1Component } from './OwnerModule/components/login1/login1.componen
     CalendarComponent,
     ProfileComponent,
     SettingsComponent,
-    Login1Component
+    // Login1Component,
+    OwnerLoginComponent,
+    OwnerRegisterComponent
   ],
   imports: [
     BrowserModule, ReactiveFormsModule,

@@ -3,5 +3,5 @@ export class LocationModel {
     "state": string;
     "city": string;
     "streetAddress": string;
-    "postalCode": number;
+    "zipcode": number;
 }

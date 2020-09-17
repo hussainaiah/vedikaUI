@@ -1,9 +1,8 @@
 import { PhotosService } from 'src/app/OwnerModule/services/Photos.service';
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { HttpEventType, HttpResponse, HttpErrorResponse } from '@angular/common/http';
-import { map, catchError } from 'rxjs/operators';
-import { of } from 'rxjs';
+// import { photos } from 'src/app/OwnerModule/models/photos.model';
+
 
 @Component({
   selector: 'app-photos',
@@ -12,10 +11,10 @@ import { of } from 'rxjs';
 })
 export class PhotosComponent implements OnInit {
 
-  images = [];
+  urls = [];
+  count = 0;
 
-  constructor(private router: Router, private Images: PhotosService) { }
-
+  constructor(private router: Router, private photos: PhotosService) { }
 
   ngOnInit(): void {
   }
@@ -25,23 +24,30 @@ export class PhotosComponent implements OnInit {
       var filesAmount = event.target.files.length;
       for (let i = 0; i < filesAmount; i++) {
         var reader = new FileReader();
+        this.count = this.count + 1;
 
         reader.onload = (event: any) => {
-          console.log(event.target.result);
-          this.images.push(event.target.result);
+          this.urls.push(event.target.result);
         }
 
         reader.readAsDataURL(event.target.files[i]);
       }
     }
-  } 
+  }
 
   back() {
     this.router.navigateByUrl("/details")
   }
 
   next() {
+    const formData = new FormData();
+    correlationid: 1234;
+    for (let j = 0; j < this.count; j++) {
+      formData.append('file', this.urls[0]);
+      this.photos.postFile(formData).subscribe(data => {
+        console.log(data)
+      });
+    }
     this.router.navigateByUrl("/security")
   }
-
 }

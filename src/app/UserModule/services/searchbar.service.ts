@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders,HttpParams} from '@angular/common/http';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable } from 'rxjs';
 
 const httpOptions = {
@@ -16,9 +16,10 @@ export class SearchbarService {
   {
     return this.http.get('http://localhost:8057/api/functionhalls');
   }
+  
   findFunctionhallByNameAndCity(city):Observable<any>
   {
-    return this.http.get('http://localhost:8057/api/functionhallsBy/?city='+city);
+    return this.http.get('http://localhost:8057/api/functionhalls/?city='+city);
   }
  
 }

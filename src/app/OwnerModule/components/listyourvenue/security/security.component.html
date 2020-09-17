@@ -3,7 +3,7 @@
 ================================================================================== -->
 <nav class="navbar navbar-white bg-white">
     <a class="navbar-brand" href="#">
-        <img src="../../../../../assets/Images/ProjectName1.png" alt="Vedikas" style="width: 140px;">
+        <img src="../../../../../assets/Images/ProjectName.png" alt="Vedikas" style="width: 140px;">
     </a>
 </nav>
 <!-- =================================================================================
@@ -58,7 +58,7 @@
                         <div class="form-group ">
                             <label for="mobileNumber"></label>
                             <input type="tel" id="mobileNumber" class="form-control" formControlName="mobileNumber"
-                                placeholder="Phone Number" style="height: 50px;" maxlength="12" size="12"
+                                placeholder="Phone Number" style="height: 50px;" maxlength="13" size="13"
                                 pattern="[0-9 -()+]+$" required
                                 [ngClass]="{'is-invalid':SecurityForm.get('mobileNumber').touched && SecurityForm.get('mobileNumber').invalid}" />
                             <div *ngIf="SecurityForm.get('mobileNumber').touched && SecurityForm.get('mobileNumber').invalid"
