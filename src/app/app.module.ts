@@ -74,6 +74,5 @@ import { OwnerRegisterComponent } from './OwnerModule/components/owner-register/
     HttpClientModule
   ],
   providers: [SearchbarService],
-  bootstrap: [AppComponent]
 })
 export class AppModule { }

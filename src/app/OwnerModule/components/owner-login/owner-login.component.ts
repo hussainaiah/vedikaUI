@@ -34,7 +34,7 @@ export class OwnerLoginComponent implements OnInit {
 
   sendOtp(postData:{mobileNumber: number;}) {
     this.http.post(
-      'http://localhost:8057/api/login/verification?mobileNumber=%2B',postData
+      'http://localhost:8057/api/login/verification?mobileNumber=%2B91'+postData.mobileNumber,postData
     )
     .subscribe(ResponseData =>{
       console.log(ResponseData);
